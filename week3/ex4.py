@@ -1,35 +1,35 @@
 def q13():
     word = input("Enter a word: ")
-    empty = ""
     letter_a = 'a'
-    print(f"Is word {word} valid? {word is not empty and letter_a in word}")
+    print(f"Is word {word} valid? {bool(word) and letter_a in word}")
 
 def q14():
     word1 = input("Enter a word: ")
     word2 = input("Enter a word: ")
-    empty = ""
     letter_a = 'a'
-    not_empty = word1 is not empty and  word2 is not empty
+    not_empty = bool(word1) and  bool(word2)
     a_in_words = (letter_a in word1) or (letter_a in word2)
     print(f"does {word1} and {word2} meet the requirement? {not_empty and a_in_words}")
 
 def q15():
     num = input("Enter a number: ")
-    print(f"Is number {num} decimal? {"." in num}")
+    decimal = "."
+    print(f"Is number {num} decimal? {decimal in num}")
+    
 
 def q16():
     is_sunny = input("Is sunny day (True/False): ")
-    tempture  = float(input("What is the tempture outside: "))
-    max_ttempture = 27
-    print(f"Is it a good day for picnic? {tempture < max_ttempture and bool(is_sunny) == True}")
+    temperature  = float(input("What is the temperature outside: "))
+    max_temperature = 27
+    print(f"Is it a good day for picnic? {temperature < max_temperature and is_sunny == "True"}")
 
 def q17():
     attendacne = int(input("What is the precent of attendacne?"))
-    submittes_works  = int(input("What is the precent of submittes_works? "))
+    submittes_works  = int(input("What is the precent of submittes_works (True/False)? "))
     submit_work5 = input("Is the student submited work num 5? ")
     min_precent_of_submittes_works = 70
     min_precent_of_attendacne = 80
-    print(f"can student participate the exam? {attendacne >= min_precent_of_attendacne and submittes_works >= min_precent_of_submittes_works and bool(submit_work5) == True}")
+    print(f"can student participate the exam? {attendacne >= min_precent_of_attendacne and submittes_works >= min_precent_of_submittes_works and submit_work5 == "True"}")
 
 def q18():
     amount_of_fruit = int(input("How many fruit did u buy?"))
@@ -46,10 +46,11 @@ def q19():
 
 
 def q20():
-    oop_python_course  = bool(input("Did you take OOP Python (True/False)? "))
+    oop_python_course  = input("Did you take OOP Python (True/False)? ")
     grade_computer_science = float(input("Enter Introduction to Computer Science grade: "))
     min_grade = 55
-    print(f"Is a student eligible to enroll in an OOP Java course? {oop_python_course == False or grade_computer_science > min_grade}")
+    print(f"Is a student eligible to enroll in an OOP Java course? {oop_python_course == "False" 
+                                                                    or grade_computer_science > min_grade}")
     
 
 
@@ -63,7 +64,7 @@ def q20():
 
 
 def main():
-    q14()
+    q20()
 
 
 
