@@ -114,15 +114,16 @@ def q12():
     five_room_duplex_apartment = 200
     rooms_in_apartment = input("Enter number of rooms in the apartment (3/4/5)")
     if rooms_in_apartment == "3":
-        print(f"The amount to be paid is {three_room_apartment} NIS")
+        res= three_room_apartment
     elif rooms_in_apartment == "4":
-        print(f"The amount to be paid is {four_room_apartment} NIS")
+        pres= four_room_apartment
     elif rooms_in_apartment == "5":
         is_duplex = input("Is the apartment duplex(yes/no)? ")
         if is_duplex == "yes":
-            print(f"The amount to be paid is {five_room_duplex_apartment} NIS")
+            res= five_room_duplex_apartment
         else:
-            print(f"The amount to be paid is {five_room_regular_apartment} NIS")
+            res = five_room_regular_apartment
+    print(f"The amount to be paid is {res} NIS")
 
 def q13():
     num = int(input("Enter a num: "))
@@ -166,14 +167,12 @@ def q18():
     allow_operations = "+","-","*","/"
     error_messege = "Invalid operation"
     error_messege_zero = "Can not divide by zero"
-    check_value = (num1 + num2 if operation in allow_operations and operation == "+" else 
-                   num1 - num2 if operation in allow_operations and operation == "-" else 
-                   num1 * num2 if operation in allow_operations and operation == "*" else 
-                   num1 / num2 if operation in allow_operations and operation == "/" and num2 != 0 else 
+    check_value = (f"the result is {num1 + num2}" if operation in allow_operations and operation == "+" else 
+                   f"the result is {num1 - num2}"if operation in allow_operations and operation == "-" else 
+                   f"the result is {num1 * num2}" if operation in allow_operations and operation == "*" else 
+                   f"the result is {num1 / num2}" if operation in allow_operations and operation == "/" and num2 != 0 else 
                    error_messege if operation not in allow_operations else error_messege_zero if num2 == 0 and operation == "/" else "")
-    res = (f"the result is {check_value}" if check_value != error_messege and check_value != error_messege_zero else 
-           error_messege if check_value == error_messege else error_messege_zero)
-    print(res) 
+    print(check_value) 
 
 
 

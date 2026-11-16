@@ -1,3 +1,12 @@
+def my_rjust(user_string, total, fill_char):
+    if len(user_string) < total:
+        delta = total - len(user_string)
+        new_string = fill_char*delta
+        return new_string
+    else:
+        return user_string
+    
+
 
 def q11():# gets one word and prints the represent print for Python
     word = input("Enter word: ")
@@ -28,11 +37,12 @@ def q14():# gets the wanted floor, start floor and now position of the elevator 
     print(f"The total time is {total_time} seconds")
       
 def q15():# gets length and width of a rectangle and swaps them
-    length = int(input("Enter the legnth of the ractangle: "))
-    width = int(input("Enter the width of the ractangle: "))
-    temp = length
-    length = width
-    width = temp
+    length, width = int(input("Enter the legnth of the ractangle: ")) ,int(input("Enter the width of the ractangle: "))
+    #width = int(input("Enter the width of the ractangle: "))
+    #temp = length
+    #length = width
+    #width = temp
+    width, length = length, width
     print(f"length = {length}, width = {width}")
      
      
@@ -40,9 +50,9 @@ def q15():# gets length and width of a rectangle and swaps them
 def main():
     #q11()
     #q12()
-    q13()
+    #q13()
     #q14()
-    #q15()
+    q15()
 
 
 
