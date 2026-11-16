@@ -113,20 +113,18 @@ def q10():
     if num <= 10 :
         while index_rows <= num:
             while num_of_symble <= num:
-                res += (num-num_of_symble)*space
-                res += "* "*num_of_symble
+                res += (num-num_of_symble)*space + "* "*num_of_symble + "\n"
                 num_of_symble += 1
-                res += "\n"
             index_rows += 1
     print(res)
 
 def q11():
-    sring = input("Enter a string: ")
+    string = input("Enter a string: ")
     index = 0
     res = ""
-    while (index < len(sring)):
-        if sring[index] >= 'A' and  sring[index]<= 'Z':
-           res += sring[index]
+    while (index < len(string)):
+        if string[index] >= 'A' and  string[index]<= 'Z':
+           res += string[index]
         elif res == "":
             res = "No capital letters"
         index += 1
@@ -245,7 +243,7 @@ def main():
     #q7()
     #q8()
     #q9()
-    #q10()
+    q10()
     #q11()
     #q12()
     #q13()
@@ -255,7 +253,7 @@ def main():
     #q17()
     #q18()
     #q19()
-    q20()
+    #q20()
 
 
 if __name__ == '__main__':
